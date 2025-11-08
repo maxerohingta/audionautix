@@ -259,12 +259,12 @@
       ]
     },
     {
-      "id": "radio_afro_beat",
+      "id": "audionautix",
       "meta": {
-        "logo": "radio_afro_beat/radio_afro_beat.png",
-        "genre": "Funk and afrobeat",
-        "host": "Femi Kuti",
-        "title": "IF99 - International Funk"
+        "logo": "audionautix/audionautix.png",
+        "genre": "Dance electronic music",
+        "host": "DJDropsCentral",
+        "title": "Audionautix"
       },
       "playlist": {
         "firstFragment": [
@@ -490,11 +490,77 @@
           }
         ]
       },
-      "trackLists": [
-        "track",
-        "general",
-        "mixin"
-      ]
+      "playlist": {
+        "firstFragment": [
+          {
+            "fragmentTag": "general"
+          }
+        ],
+        "fragments": [
+          {
+            "tag": "general",
+            "src": {
+              "type": "group",
+              "groupTag": "general"
+            },
+            "nextFragment": [
+              {
+                "fragmentTag": "track"
+              }
+            ]
+          },
+          {
+            "tag": "track",
+            "src": {
+              "type": "group",
+              "groupTag": "track"
+            },
+            "nextFragment": [
+              {
+                "fragmentTag": "general",
+                "probability": 0.333
+              },
+              {
+                "fragmentTag": "track"
+              }
+            ],
+            "mixins": {
+              "pos": [
+                {
+                  "tag": "begin",
+                  "relativeOffset": 0.03
+                },
+                {
+                  "tag": "end",
+                  "relativeOffset": 0.97
+                }
+              ],
+              "mix": [
+                {
+                  "tag": "mixins",
+                  "src": {
+                    "type": "group",
+                    "groupTag": "mixin"
+                  },
+                  "condition": {
+                    "type": "random",
+                    "probability": 0.9
+                  },
+                  "posVariant": [
+                    {
+                      "posTag": "end"
+                    },
+                    {
+                      "posTag": "begin"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "trackLists": ["track", "general", "mixin"]
     }
   ],
   "trackLists": [
@@ -504,18 +570,18 @@
         {
           "id": "audionautix_dont_stop",
           "path": "audionautix/dont_stop",
-          "duration": 363.1 
+          "duration": 363.1
         },
         {
           "id": "audionautix_thump",
           "path": "audionautix/thump",
-          "duration": 114.41 
+          "duration": 114.41
         },
         {
           "id": "audionautix_transportation",
           "path": "audionautix/transportation",
           "duration": 190.12
-        }        
+        }
       ]
     },
     {
