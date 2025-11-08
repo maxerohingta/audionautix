@@ -493,27 +493,40 @@
       "playlist": {
         "firstFragment": [
           {
-            "fragmentTag": "general"
+            "fragment": "fragment_audionautix_general"
+          }
+        ],
+        "positions": [
+          {
+            "id": "track_start",
+            "relativeOffset": 0.03
+          },
+          {
+            "id": "track_end",
+            "relativeOffset": 0.97
           }
         ],
         "fragments": [
           {
-            "tag": "general",
+            "id": "fragment_audionautix_general",
             "src": {
-              "type": "group",
-              "groupTag": "general"
+              "trackLists": ["general"]
             },
             "nextFragment": [
               {
                 "fragmentTag": "track"
               }
+            ],
+            "next": [
+              {
+                "fragment": "fragment_audionautix_track"
+              }
             ]
           },
           {
-            "tag": "track",
+            "id": "fragment_audionautix_track",
             "src": {
-              "type": "group",
-              "groupTag": "track"
+              "trackLists": ["track"]
             },
             "nextFragment": [
               {
@@ -522,6 +535,15 @@
               },
               {
                 "fragmentTag": "track"
+              }
+            ],
+            "next": [
+              {
+                "fragment": "fragment_audionautix_general",
+                "probability": 0.333
+              },
+              {
+                "fragment": "fragment_audionautix_track"
               }
             ],
             "mixins": {
